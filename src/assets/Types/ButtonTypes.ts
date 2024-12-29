@@ -1,15 +1,18 @@
+export interface itemAmount {
+    name: string;
+    Amount: BigInt;
+}
+
 export interface itemVals {
     Id: string;
     name: string;
-    price: number;
-    visible: boolean;
-    visibleValue: number;
+    price: bigint;
+    visibleValue: bigint;
     PriceIncrease:  number;
-    PayOff: number;
+    PayOff: bigint;
     StarEffect?: number;
     ExtraEffect?: number;
     RequiredSpecial?: Special;
-    Amount: number;
     ActiveImage: string
     HiddenImage: string
     invisibleImage: string
@@ -18,9 +21,8 @@ export interface itemVals {
 export interface Special {
     Id: string;
     name: string;
-    price: number;
-    visible: boolean;
-    visibleValue: number;
+    price: bigint;
+    visibleValue: bigint;
     PayOff: number;
     ExtraEffect: number;
     ActiveImage: string
@@ -31,15 +33,24 @@ export interface Special {
 export interface Finger {
     Id: string;
     name: string;
-    price: number;
+    price: bigint;
     PayOff: number;
+    PriceIncrease: 10,
+    PayOffIncrease: 2,
     ActiveImage: string
     HiddenImage: string
 }
 
-export interface Univers {
+export interface Dimension {
     Id: string;
     name: string;
     PayOff: number;
     ActiveImage: string
+}
+
+export interface StoredInventory {
+    ItemList: itemAmount[];
+    SpecialList: Special[];
+    FinerList: Finger[];
+    DimensionList: Dimension[]
 }
