@@ -10,9 +10,10 @@ const [currentAmount, setCurrentAmount]= useState(0n)
 
 
 const buyItem = () =>{
-    if (enthalpy> price){
+    if (enthalpy> price && item){
         addInvItem(item)
     }
+}
 
 useEffect(() =>{
     if(inventory){
@@ -25,7 +26,7 @@ useEffect(() =>{
       setCurrentAmount(BigInt(InventoryAmount.Amount) || 0n)
    }}
 },[inventory])
-}
+
 
 useEffect(() =>{
     if(item.price && item.PriceIncrease){
