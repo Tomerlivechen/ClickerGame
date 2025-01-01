@@ -27,9 +27,10 @@ export interface Special {
     visibleValue: bigint;
     PayOff: number;
     ExtraEffect: number;
-    ActiveImage: string
-    HiddenImage: string
-    invisibleImage: string
+    ActiveImage: string;
+    HiddenImage: string;
+    invisibleImage: string;
+
 }
 
 export interface FingerVaue {

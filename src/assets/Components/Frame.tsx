@@ -1,16 +1,15 @@
-
 import { FrameVars } from "../Types/ConstructiorTypes";
 
-const Frame: React.FC< FrameVars > = (ThisFrameVars) => {
-
-return(
+const Frame: React.FC<FrameVars> = (ThisFrameVars) => {
+  return (
     <>
-    <div className="border-3 rounded-lg p-4 border-solid">
+      <div
+        className={`border-2 rounded-lg p-1 border-solid ${ThisFrameVars.tailwind}`}
+      >
         {ThisFrameVars.children}
-    </div>
+      </div>
     </>
-)
+  );
+};
 
-}
-
-export { Frame}
+export { Frame };

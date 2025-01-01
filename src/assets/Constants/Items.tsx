@@ -8,7 +8,8 @@ const Lepton: itemVals = {
   visibleValue: 0n,
   PriceIncrease: 0.05,
   PayOff: 1n,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737111/1-Lepton_hv1r2a.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737111/1-Lepton_hv1r2a.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -21,7 +22,8 @@ const Boson: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 10n,
   RequiredSpecial: SpecialNames.WeakForce,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737111/2-Boson_y5uyfo.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737111/2-Boson_y5uyfo.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -32,9 +34,10 @@ const Atoms: itemVals = {
   price: 3000n,
   visibleValue: 0n,
   PriceIncrease: 0.05,
-  PayOff: 150n,
+  PayOff: 100n,
   RequiredSpecial: SpecialNames.StringForce,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737112/3-Atom_gkxv3q.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737112/3-Atom_gkxv3q.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -42,11 +45,12 @@ const Atoms: itemVals = {
 const Gas: itemVals = {
   Id: "",
   name: "Gas",
-  price: 12000n,
-  visibleValue: 48000n,
+  price: 120000n,
+  visibleValue: 60000n,
   PriceIncrease: 0.05,
-  PayOff: 4800n,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737111/4-Gas_kczidz.png",
+  PayOff: 1000n,
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737111/4-Gas_kczidz.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -54,11 +58,12 @@ const Gas: itemVals = {
 const Dust: itemVals = {
   Id: "",
   name: "Dust",
-  price: 480000n,
-  visibleValue: 192000n,
+  price: 237000n,
+  visibleValue: 118500n,
   PriceIncrease: 0.05,
-  PayOff: 384000n,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737112/5-Dust_gwmxus.png",
+  PayOff: 10000n,
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737112/5-Dust_gwmxus.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -66,12 +71,13 @@ const Dust: itemVals = {
 const Water: itemVals = {
   Id: "",
   name: "Water",
-  price: 9600000n,
-  visibleValue: 3840000n,
+  price: 165900000n,
+  visibleValue: 82950000n,
   PriceIncrease: 0.05,
-  PayOff: 7680000n,
+  PayOff: 100000n,
   RequiredSpecial: SpecialNames.Chemistry,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737112/6-Water_xvq3la.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737112/6-Water_xvq3la.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -79,12 +85,13 @@ const Water: itemVals = {
 const Rocks: itemVals = {
   Id: "",
   name: "Rocks",
-  price: 1920000000n,
-  visibleValue: 76800000n,
+  price: 4977000000n,
+  visibleValue: 2488500000n,
   PriceIncrease: 0.05,
-  PayOff: 172800000n,
+  PayOff: 1000000n,
   RequiredSpecial: SpecialNames.Electromagnetism,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737112/7-Rock_z5fwso.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737112/7-Rock_z5fwso.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -92,12 +99,13 @@ const Rocks: itemVals = {
 const Astroids: itemVals = {
   Id: "",
   name: "Astroids",
-  price: 115200000000n,
-  visibleValue: 4608000000n,
+  price: 199080000000n,
+  visibleValue: 99540000000n,
   PriceIncrease: 0.05,
-  PayOff: 3456000000n,
+  PayOff: 10000000n,
   RequiredSpecial: SpecialNames.Gravity,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737112/8-Astroid_fbkjum.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737112/8-Astroid_fbkjum.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -105,12 +113,13 @@ const Astroids: itemVals = {
 const Commet: itemVals = {
   Id: "",
   name: "Commet",
-  price: 9216000000000n,
-  visibleValue: 368640000000n,
+  price: 1990800000000n,
+  visibleValue: 995400000000n,
   PriceIncrease: 0.05,
-  PayOff: 737280000000n,
+  PayOff: 100000000n,
   StarEffect: 2.2,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/b_rgb:000000/c_pad,ar_1:1/v1735737112/9-Commet_i6pduh.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/b_rgb:000000/c_pad,ar_1:1/v1735737112/9-Commet_i6pduh.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -118,12 +127,13 @@ const Commet: itemVals = {
 const DwarfPlanet: itemVals = {
   Id: "",
   name: "Dwarf Planet",
-  price: 737280000000000n,
-  visibleValue: 29491200000000n,
+  price: 179172000000000n,
+  visibleValue: 89586000000000n,
   PriceIncrease: 0.05,
-  PayOff: 58982400000000n,
+  PayOff: 1000000000n,
   StarEffect: 2.2,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737113/10-DwarfP_rxu9je.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737113/10-DwarfP_rxu9je.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -131,12 +141,13 @@ const DwarfPlanet: itemVals = {
 const RockyPlanet: itemVals = {
   Id: "",
   name: "Rocky Planet",
-  price: 14745600000000000n,
-  visibleValue: 589824000000000n,
+  price: 10750320000000000n,
+  visibleValue: 5375160000000000n,
   PriceIncrease: 0.05,
-  PayOff: 1179648000000000n,
+  PayOff: 10000000000n,
   StarEffect: 2.2,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737113/11-RockP_bkdhrl.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737113/11-RockP_bkdhrl.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -144,12 +155,13 @@ const RockyPlanet: itemVals = {
 const IcePlanet: itemVals = {
   Id: "",
   name: "IcePlanet",
-  price: 589824000000000000n,
-  visibleValue: 23592960000000000n,
+  price: 537516000000000000n,
+  visibleValue: 268758000000000000n,
   PriceIncrease: 0.05,
-  PayOff: 29491200000000000n,
+  PayOff: 100000000000n,
   StarEffect: 2.2,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737113/12-IceP_ozifki.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737113/12-IceP_ozifki.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -157,12 +169,13 @@ const IcePlanet: itemVals = {
 const GasPlanet: itemVals = {
   Id: "",
   name: "GasPlanet",
-  price: 53084160000000000000n,
-  visibleValue: 2123366400000000000n,
+  price: 48376440000000000000n,
+  visibleValue: 24188220000000000000n,
   PriceIncrease: 0.05,
-  PayOff: 4246732800000000000n,
+  PayOff: 1000000000000n,
   StarEffect: 2.2,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737113/13-GasP_i95ibg.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737113/13-GasP_i95ibg.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -170,12 +183,13 @@ const GasPlanet: itemVals = {
 const BrownDwarf: itemVals = {
   Id: "",
   name: "Brown Dwarf",
-  price: 530841600000000000000n,
-  visibleValue: 21233664000000000000n,
+  price: 3386350800000000000000n,
+  visibleValue: 1693175400000000000000n,
   PriceIncrease: 0.05,
-  PayOff: 5308416000000000000n,
+  PayOff: 10000000000000n,
   StarEffect: 2.2,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737114/14-DwarfS_gsjwza.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737114/14-DwarfS_gsjwza.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -183,12 +197,13 @@ const BrownDwarf: itemVals = {
 const StarM: itemVals = {
   Id: "",
   name: "M type Star",
-  price: 5308416000000000000000n,
-  visibleValue: 212336640000000000000n,
+  price: 237044556000000000000000n,
+  visibleValue: 118522278000000000000000n,
   PriceIncrease: 0.05,
-  PayOff: 318504960000000000000n,
+  PayOff: 100000000000000n,
   RequiredSpecial: SpecialNames.Fusion,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737115/15-StarM_cykysk.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737115/15-StarM_cykysk.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -196,12 +211,13 @@ const StarM: itemVals = {
 const StarK: itemVals = {
   Id: "",
   name: "K type Star",
-  price: 212336640000000000000000n,
-  visibleValue: 8493465600000000000000n,
+  price: 7111336680000000000000000n,
+  visibleValue: 3555668340000000000000000n,
   PriceIncrease: 0.05,
-  PayOff: 16986931200000000000000n,
+  PayOff: 1000000000000000n,
   RequiredSpecial: SpecialNames.Fusion,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737115/16-StarK_p4jl2n.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737115/16-StarK_p4jl2n.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -209,12 +225,13 @@ const StarK: itemVals = {
 const StarG: itemVals = {
   Id: "",
   name: "G type Star",
-  price: 8493465600000000000000000n,
-  visibleValue: 339738624000000000000000n,
+  price: 426680200800000000000000000n,
+  visibleValue: 213340100400000000000000000n,
   PriceIncrease: 0.05,
-  PayOff: 424673280000000000000000n,
+  PayOff: 10000000000000000n,
   RequiredSpecial: SpecialNames.Fusion,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737116/17-StarG_gasa1s.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737116/17-StarG_gasa1s.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -222,12 +239,13 @@ const StarG: itemVals = {
 const StarF: itemVals = {
   Id: "",
   name: "F type Star",
-  price: 339738624000000000000000000n,
-  visibleValue: 13589544960000000000000000n,
+  price: 34134416064000000000000000000n,
+  visibleValue: 17067208032000000000000000000n,
   PriceIncrease: 0.05,
-  PayOff: 3397386240000000000000000n,
+  PayOff: 100000000000000000n,
   RequiredSpecial: SpecialNames.Fusion,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737116/18-StarF_umgqs2.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737116/18-StarF_umgqs2.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -235,12 +253,13 @@ const StarF: itemVals = {
 const StarA: itemVals = {
   Id: "",
   name: "A type Star",
-  price: 3397386240000000000000000000n,
-  visibleValue: 135895449600000000000000000n,
+  price: 341344160640000000000000000000n,
+  visibleValue: 170672080320000000000000000000n,
   PriceIncrease: 0.05,
-  PayOff: 203843174400000000000000000n,
+  PayOff: 1000000000000000000n,
   RequiredSpecial: SpecialNames.Fusion,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737117/19-StarA_snjkwv.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737117/19-StarA_snjkwv.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -248,12 +267,13 @@ const StarA: itemVals = {
 const StarB: itemVals = {
   Id: "",
   name: "B type Star",
-  price: 135895449600000000000000000000n,
-  visibleValue: 5435817984000000000000000000n,
+  price: 23894091244800000000000000000000n,
+  visibleValue: 11947045622400000000000000000000n,
   PriceIncrease: 0.05,
-  PayOff: 2717908992000000000000000000n,
+  PayOff: 10000000000000000000n,
   RequiredSpecial: SpecialNames.Fusion,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737117/20-StarB_soxh9c.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737117/20-StarB_soxh9c.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -261,12 +281,13 @@ const StarB: itemVals = {
 const StarO: itemVals = {
   Id: "",
   name: "O type Star",
-  price: 5435817984000000000000000000000n,
-  visibleValue: 217432719360000000000000000000n,
+  price: 477881824896000000000000000000000n,
+  visibleValue: 238940912448000000000000000000000n,
   PriceIncrease: 0.05,
-  PayOff: 326149079040000000000000000000n,
+  PayOff: 100000000000000000000n,
   RequiredSpecial: SpecialNames.Fusion,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737118/21-StarO_agnbst.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737118/21-StarO_agnbst.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -274,12 +295,13 @@ const StarO: itemVals = {
 const NurtonStar: itemVals = {
   Id: "",
   name: "Nurton Star",
-  price: 163074539520000000000000000000000n,
-  visibleValue: 6522981580800000000000000000000n,
+  price: 9557636497920000000000000000000000n,
+  visibleValue: 4778818248960000000000000000000000n,
   PriceIncrease: 0.05,
-  PayOff: 13045963161600000000000000000000n,
+  PayOff: 1000000000000000000000n,
   RequiredSpecial: SpecialNames.Gravity2,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737119/22-NeutronStar_ul1zid.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737119/22-NeutronStar_ul1zid.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -287,12 +309,13 @@ const NurtonStar: itemVals = {
 const BlackHole: itemVals = {
   Id: "",
   name: "Black Hole",
-  price: 1630745395200000000000000000000000n,
-  visibleValue: 65229815808000000000000000000000n,
+  price: 860187284812800000000000000000000000n,
+  visibleValue: 430093642406400000000000000000000000n,
   PriceIncrease: 0.05,
-  PayOff: 48922361856000000000000000000000n,
+  PayOff: 10000000000000000000000n,
   RequiredSpecial: SpecialNames.Gravity3,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737119/23-BlackHole_w2hx4k.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737119/23-BlackHole_w2hx4k.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -300,12 +323,13 @@ const BlackHole: itemVals = {
 const Quasar: itemVals = {
   Id: "",
   name: "Quasar",
-  price: 32614907904000000000000000000000000n,
-  visibleValue: 1304596316160000000000000000000000n,
+  price: 43009364240640000000000000000000000000n,
+  visibleValue: 21504682120320000000000000000000000000n,
   PriceIncrease: 0.05,
-  PayOff: 1956894474240000000000000000000000n,
+  PayOff: 100000000000000000000000n,
   RequiredSpecial: SpecialNames.Gravity3,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737120/24-Quasar_wirwu0.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737120/24-Quasar_wirwu0.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -313,12 +337,13 @@ const Quasar: itemVals = {
 const Nebula: itemVals = {
   Id: "",
   name: "Nebula",
-  price: 652298158080000000000000000000000000n,
-  visibleValue: 26091926323200000000000000000000000n,
+  price: 3010655496844800000000000000000000000000n,
+  visibleValue: 1505327748422400000000000000000000000000n,
   PriceIncrease: 0.05,
-  PayOff: 32614907904000000000000000000000000n,
+  PayOff: 1000000000000000000000000n,
   RequiredSpecial: SpecialNames.Gravity3,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737120/25-Nebula_r5syb3.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737120/25-Nebula_r5syb3.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -326,12 +351,13 @@ const Nebula: itemVals = {
 const Galaxy: itemVals = {
   Id: "",
   name: "Galaxy",
-  price: 39137889484800000000000000000000000000n,
-  visibleValue: 1565515579392000000000000000000000000n,
+  price: 120426219873792000000000000000000000000000n,
+  visibleValue: 60213109936896000000000000000000000000000n,
   PriceIncrease: 0.05,
-  PayOff: 3131031158784000000000000000000000000n,
+  PayOff: 10000000000000000000000000n,
   RequiredSpecial: SpecialNames.Gravity3,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737121/26-Galaxy_kvz9hm.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737121/26-Galaxy_kvz9hm.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -339,12 +365,13 @@ const Galaxy: itemVals = {
 const GalexyCluster: itemVals = {
   Id: "",
   name: "Galexy Cluster",
-  price: 1174136684544000000000000000000000000000n,
-  visibleValue: 46965467381760000000000000000000000000n,
+  price: 9634097589903360000000000000000000000000000n,
+  visibleValue: 4817048794951680000000000000000000000000000n,
   PriceIncrease: 0.05,
-  PayOff: 46965467381760000000000000000000000000n,
+  PayOff: 100000000000000000000000000n,
   RequiredSpecial: SpecialNames.Gravity3,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737124/27-Galaxy_Cluster_vape0s.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737124/27-Galaxy_Cluster_vape0s.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -355,9 +382,10 @@ const Universe: itemVals = {
   price: 58706834227200000000000000000000000000000n,
   visibleValue: 23482733690880000000000000000000000000000n,
   PriceIncrease: 0.05,
-  PayOff: 587068342272000000000000000000000000000n,
+  PayOff: 1000000000000000000000000000n,
   RequiredSpecial: SpecialNames.Gravity3,
-  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737124/27-Galaxy_Cluster_vape0s.png",
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737124/27-Galaxy_Cluster_vape0s.png",
   HiddenImage: "",
   invisibleImage: "",
 };

@@ -41,22 +41,24 @@ const InventoryContext = createContext<{
   inventory: StoredInventory | undefined;
   enthalpy: bigint;
   totalEnthalpy: bigint;
+  addPerSec: bigint;
   clickOn: () => void;
   addInvItem: (item: itemVals, price: bigint) => void;
   addSpecial: (special: Special) => void;
   Reset: (NewDimention: Dimension) => void;
   addFinger: (finger: Finger) => void;
-  useEnthalpy: (amount: bigint) => void;
+  UseEnthalpy: (amount: bigint) => void;
 }>({
   inventory: undefined,
   enthalpy: 0n,
   totalEnthalpy: 0n,
+  addPerSec: 0n,
   clickOn: () => {},
   addInvItem: () => {},
   addSpecial: () => {},
   Reset: () => {},
   addFinger: () => {},
-  useEnthalpy: () => {},
+  UseEnthalpy: () => {},
 });
 
 const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
@@ -69,6 +71,7 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [totalEnthalpy, setTotalEnthalpy] = useState<bigint>(
     defaultValues.DefaultEnthalpy
   );
+  const [addPerSec, setAddPerSec] = useState<bigint>(0n);
 
   useEffect(() => {
     if (initialValues.Enthalpy) {
@@ -86,7 +89,6 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     } else {
       setInventory(defaultValues.DefaultInventory);
     }
-    
   }, []);
 
   useEffect(() => {
@@ -117,9 +119,7 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
       inventory?.ItemList.forEach((ItemList) => {
         AddEnthalpy =
           AddEnthalpy +
-          ItemList.Amount *
-            ItemList.PayOff *
-            BigInt(ItemList.StarEffect ?? 1n);
+          ItemList.Amount * ItemList.PayOff * BigInt(ItemList.StarEffect ?? 1n);
       });
     } else {
       if (!inventory?.HasStar) {
@@ -139,17 +139,15 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
         MultiplyEnthalpy = MultiplyEnthalpy * BigInt(SpecialList.PayOff);
       });
     }
-    if (MultiplyEnthalpy> 1){
-      console.log(AddEnthalpy)
-    setEnthalpy((prev) => prev + AddEnthalpy * MultiplyEnthalpy);
-    setTotalEnthalpy((prev) => prev + AddEnthalpy * MultiplyEnthalpy);}
-    else {
-      console.log(AddEnthalpy)
+    if (MultiplyEnthalpy > 1) {
+      setAddPerSec(AddEnthalpy * MultiplyEnthalpy);
+      setEnthalpy((prev) => prev + AddEnthalpy * MultiplyEnthalpy);
+      setTotalEnthalpy((prev) => prev + AddEnthalpy * MultiplyEnthalpy);
+    } else {
+      setAddPerSec(AddEnthalpy);
       setEnthalpy((prev) => prev + AddEnthalpy);
       setTotalEnthalpy((prev) => prev + AddEnthalpy);
     }
-    
-
   };
 
   const addStar = () => {
@@ -194,8 +192,7 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
       }));
     }
 
-    useEnthalpy(price)
-    
+    UseEnthalpy(price);
   };
 
   const addSpecial = (special: Special) => {
@@ -219,7 +216,7 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     }));
   };
 
-  const useEnthalpy = (amount: bigint) => {
+  const UseEnthalpy = (amount: bigint) => {
     if (enthalpy > amount) {
       const newEnthalpy = enthalpy - amount;
       setEnthalpy(newEnthalpy);
@@ -238,6 +235,7 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <InventoryContext.Provider
       value={{
+        addPerSec,
         totalEnthalpy,
         inventory,
         enthalpy,
@@ -246,7 +244,7 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
         addSpecial,
         Reset,
         addFinger,
-        useEnthalpy,
+        UseEnthalpy,
       }}
     >
       {children}
