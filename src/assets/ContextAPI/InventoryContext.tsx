@@ -40,7 +40,7 @@ const InventoryContext = createContext<{
   inventory: StoredInventory | undefined;
   enthalpy: bigint;
   clickOn: () => void;
-  addItem: (item: itemVals) => void;
+  addInvItem: (item: itemVals) => void;
   addSpecial: (special: Special) => void;
   Reset: (NewDimention: Dimension) => void;
   addFinger: (finger: Finger) => void;
@@ -49,7 +49,7 @@ const InventoryContext = createContext<{
   inventory: undefined,
   enthalpy: 0n,
   clickOn: () => {},
-  addItem: () => {},
+  addInvItem: () => {},
   addSpecial: () => {},
   Reset: () => {},
   addFinger: () => {},
@@ -135,7 +135,7 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     }
   };
 
-  const addItem = (item: itemVals) => {
+  const addInvItem = (item: itemVals) => {
     if (item.name.includes("Star") && !inventory.HasStar) {
       addStar();
     }
@@ -212,7 +212,7 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
         inventory,
         enthalpy,
         clickOn,
-        addItem,
+        addInvItem,
         addSpecial,
         Reset,
         addFinger,

@@ -9,7 +9,9 @@ return decodedInventory
 }
 
 export const EncodeStorage = (storage: StoredInventory) =>{
-    const JsonInventory = JSON.stringify(storage)
+    const JsonInventory = JSON.stringify(storage, (_, value) =>
+        typeof value === "bigint" ? value.toString() : value
+    );
     const EncodedToken = Base64.encode(JsonInventory);
     return EncodedToken
 }
@@ -72,7 +74,7 @@ export const LargeNumbers = (number: bigint) => {
         Division = 42
         Name = "Tr"
     }
-    const ViewValue = Number(number) / Math.pow(10, Division) + Name;
+    const ViewValue = Math.floor(Number(number) / Math.pow(10, Division)) + Name;
   return ViewValue;
 }
 

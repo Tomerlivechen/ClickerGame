@@ -8,7 +8,7 @@ const Lepton: itemVals = {
   visibleValue: 0n,
   PriceIncrease: 0.05,
   PayOff: 1n,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737111/1-Lepton_hv1r2a.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -21,7 +21,7 @@ const Boson: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 10n,
   RequiredSpecial: SpecialNames.WeakForce,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737111/2-Boson_y5uyfo.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -34,7 +34,7 @@ const Atoms: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 150n,
   RequiredSpecial: SpecialNames.StringForce,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737112/3-Atom_gkxv3q.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -46,7 +46,7 @@ const Gas: itemVals = {
   visibleValue: 480000n,
   PriceIncrease: 0.05,
   PayOff: 4800n,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737111/4-Gas_kczidz.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -58,7 +58,7 @@ const Dust: itemVals = {
   visibleValue: 1920000n,
   PriceIncrease: 0.05,
   PayOff: 384000n,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737112/5-Dust_gwmxus.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -71,7 +71,7 @@ const Water: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 7680000n,
   RequiredSpecial: SpecialNames.Chemistry,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737112/6-Water_xvq3la.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -84,7 +84,7 @@ const Rocks: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 172800000n,
   RequiredSpecial: SpecialNames.Electromagnetism,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737112/7-Rock_z5fwso.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -97,7 +97,7 @@ const Astroids: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 3456000000n,
   RequiredSpecial: SpecialNames.Gravity,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737112/8-Astroid_fbkjum.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -110,7 +110,7 @@ const Commet: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 737280000000n,
   StarEffect: 2.2,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/b_rgb:000000/c_pad,ar_1:1/v1735737112/9-Commet_i6pduh.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -123,7 +123,7 @@ const DwarfPlanet: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 58982400000000n,
   StarEffect: 2.2,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737113/10-DwarfP_rxu9je.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -136,7 +136,7 @@ const RockyPlanet: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 1179648000000000n,
   StarEffect: 2.2,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737113/11-RockP_bkdhrl.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -149,7 +149,7 @@ const IcePlanet: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 29491200000000000n,
   StarEffect: 2.2,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737113/12-IceP_ozifki.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -162,7 +162,7 @@ const GasPlanet: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 4246732800000000000n,
   StarEffect: 2.2,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737113/13-GasP_i95ibg.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -175,7 +175,7 @@ const BrownDwarf: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 5308416000000000000n,
   StarEffect: 2.2,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737114/14-DwarfS_gsjwza.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -188,7 +188,7 @@ const StarM: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 318504960000000000000n,
   RequiredSpecial: SpecialNames.Fusion,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737115/15-StarM_cykysk.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -201,7 +201,7 @@ const StarK: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 16986931200000000000000n,
   RequiredSpecial: SpecialNames.Fusion,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737115/16-StarK_p4jl2n.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -214,7 +214,7 @@ const StarG: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 424673280000000000000000n,
   RequiredSpecial: SpecialNames.Fusion,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737116/17-StarG_gasa1s.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -227,7 +227,7 @@ const StarF: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 3397386240000000000000000n,
   RequiredSpecial: SpecialNames.Fusion,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737116/18-StarF_umgqs2.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -240,7 +240,7 @@ const StarA: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 203843174400000000000000000n,
   RequiredSpecial: SpecialNames.Fusion,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737117/19-StarA_snjkwv.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -253,7 +253,7 @@ const StarB: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 2717908992000000000000000000n,
   RequiredSpecial: SpecialNames.Fusion,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737117/20-StarB_soxh9c.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -266,7 +266,7 @@ const StarO: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 326149079040000000000000000000n,
   RequiredSpecial: SpecialNames.Fusion,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737118/21-StarO_agnbst.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -279,7 +279,7 @@ const NurtonStar: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 13045963161600000000000000000000n,
   RequiredSpecial: SpecialNames.Gravity2,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737119/22-NeutronStar_ul1zid.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -292,7 +292,7 @@ const BlackHole: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 48922361856000000000000000000000n,
   RequiredSpecial: SpecialNames.Gravity3,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737119/23-BlackHole_w2hx4k.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -305,7 +305,7 @@ const Quasar: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 1956894474240000000000000000000000n,
   RequiredSpecial: SpecialNames.Gravity3,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737120/24-Quasar_wirwu0.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -318,7 +318,7 @@ const Nebula: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 32614907904000000000000000000000000n,
   RequiredSpecial: SpecialNames.Gravity3,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737120/25-Nebula_r5syb3.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -331,7 +331,7 @@ const Galaxy: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 3131031158784000000000000000000000000n,
   RequiredSpecial: SpecialNames.Gravity3,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737121/26-Galaxy_kvz9hm.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -344,7 +344,7 @@ const GalexyCluster: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 46965467381760000000000000000000000000n,
   RequiredSpecial: SpecialNames.Gravity3,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737124/27-Galaxy_Cluster_vape0s.png",
   HiddenImage: "",
   invisibleImage: "",
 };
@@ -357,12 +357,12 @@ const Universe: itemVals = {
   PriceIncrease: 0.05,
   PayOff: 587068342272000000000000000000000000000n,
   RequiredSpecial: SpecialNames.Gravity3,
-  ActiveImage: "",
+  ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737124/27-Galaxy_Cluster_vape0s.png",
   HiddenImage: "",
   invisibleImage: "",
 };
 
-export const UniverseItems = {
+export const UniverseItems = [
   Lepton,
   Boson,
   Atoms,
@@ -391,4 +391,4 @@ export const UniverseItems = {
   Galaxy,
   GalexyCluster,
   Universe,
-};
+];

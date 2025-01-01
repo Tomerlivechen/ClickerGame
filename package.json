@@ -26,6 +26,7 @@
     "routing-controllers": "^0.10.4",
     "sass": "^1.83.0",
     "sweetalert2": "^11.15.3",
+    "tailwindcss": "^3.4.17",
     "yup": "^1.6.1"
   },
   "devDependencies": {
