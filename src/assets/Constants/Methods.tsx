@@ -4,14 +4,20 @@ import { Base64 } from 'js-base64';
 import { StoredInventory } from '../Types/ButtonTypes';
 export const DecodeStorage = (token: string) =>{
 const decodedToken = Base64.decode(token);
-const decodedInventory : StoredInventory= JSON.parse(decodedToken)
+const reviver = (_: string, value: any) => {
+    if (typeof value === 'string' && /^-?\d+n$/.test(value)) {
+      return BigInt(value.slice(0, -1)); 
+    }
+    return value;
+  };
+const decodedInventory : StoredInventory= JSON.parse(decodedToken,reviver)
 return decodedInventory
 }
 
 export const EncodeStorage = (storage: StoredInventory) =>{
     const JsonInventory = JSON.stringify(storage, (_, value) =>
-        typeof value === "bigint" ? value.toString() : value
-    );
+        typeof value === "bigint" ? value.toString() + "n" : value
+      );
     const EncodedToken = Base64.encode(JsonInventory);
     return EncodedToken
 }

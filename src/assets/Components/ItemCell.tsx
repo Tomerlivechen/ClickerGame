@@ -4,14 +4,14 @@ import { InventoryContext } from "../ContextAPI/InventoryContext"
 import { LargeNumbers } from "../Constants/Methods"
 
 const ItemCell = (item: itemVals) => {
-    const {inventory, enthalpy, addInvItem} = useContext(InventoryContext) 
+    const {totalEnthalpy, inventory, enthalpy, addInvItem} = useContext(InventoryContext) 
 const [price, setPrice]= useState(item.price)
 const [currentAmount, setCurrentAmount]= useState(0n)
 
 
 const buyItem = () =>{
     if (enthalpy> price && item){
-        addInvItem(item)
+        addInvItem(item,price)
     }
 }
 
@@ -30,14 +30,14 @@ useEffect(() =>{
 
 useEffect(() =>{
     if(item.price && item.PriceIncrease){
-    setPrice((item.price*BigInt((item.PriceIncrease+1)*100))/100n)
+    setPrice((item.price*(currentAmount+1n)*BigInt((item.PriceIncrease+1)*100))/100n)
     }
 
 },[currentAmount])
 
     return (
         <>
-       {enthalpy>= item.visibleValue &&
+       {totalEnthalpy>= item.visibleValue &&
        
 
 <div className="flex flex-row w-64 p-4 hover:cursor-pointer"
