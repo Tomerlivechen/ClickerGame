@@ -49,12 +49,9 @@ const ItemCell = (item: itemVals) => {
   useEffect(() => {
     if (item.price && item.PriceIncrease) {
       setPrice(
-        (item.price *
+        
           BigInt(
-            Math.floor((item.PriceIncrease * Number(currentAmount) + 1) * 100)
-          )) /
-          100n
-      );
+            Math.floor(Number(item.price) * Math.pow(item.PriceIncrease +1, Number(currentAmount)))));
     }
   }, [currentAmount]);
 

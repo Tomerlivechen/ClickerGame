@@ -40,6 +40,7 @@ const InventoryContext = createContext<{
   enthalpy: bigint;
   totalEnthalpy: bigint;
   addPerSec: bigint;
+  perClick: bigint,
   clickOn: () => void;
   addInvItem: (item: itemVals, price: bigint) => void;
   addSpecial: (special: Special) => void;
@@ -51,6 +52,7 @@ const InventoryContext = createContext<{
   enthalpy: 0n,
   totalEnthalpy: 0n,
   addPerSec: 0n,
+  perClick: 0n,
   clickOn: () => {},
   addInvItem: () => {},
   addSpecial: () => {},
@@ -70,6 +72,7 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     defaultValues.DefaultEnthalpy
   );
   const [addPerSec, setAddPerSec] = useState<bigint>(0n);
+  const [perClick, setPerClick] = useState<bigint>(0n);
 
   useEffect(() => {
     if (initialValues.Enthalpy) {
@@ -109,6 +112,15 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     setEnthalpy((prev) => prev + fingerValue);
     setTotalEnthalpy((prev) => prev + fingerValue);
   };
+
+useEffect(() => {
+  let fingerValue: bigint = 1n;
+  inventory?.FingerList.forEach((FingerList) => {
+    fingerValue = fingerValue * BigInt(FingerList.PayOff);
+  });
+  setPerClick(fingerValue)
+},[inventory]);
+
 
   const AddEnthalpy = () => {
     let AddEnthalpy: bigint = 0n;
@@ -198,6 +210,7 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
       ...prev,
       SpecialList: [...prev.SpecialList, special],
     }));
+    UseEnthalpy(special.price);
   };
 
   const addFinger = (finger: Finger) => {
@@ -205,6 +218,7 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
       ...prev,
       FingerList: [...prev.FingerList, FingerToFingerValue(finger)],
     }));
+    UseEnthalpy(finger.price);
   };
 
   const Reset = (NewDimention: Dimension) => {
@@ -233,6 +247,7 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <InventoryContext.Provider
       value={{
+        perClick,
         addPerSec,
         totalEnthalpy,
         inventory,

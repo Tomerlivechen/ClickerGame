@@ -18,7 +18,7 @@ const StrongForce: Special = {
   name: "Strong force",
   price: 1500n,
   visibleValue: 0n,
-  PayOff: 4,
+  PayOff: 2,
   ExtraEffect: 0,
   ActiveImage:
     "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737123/B-StrongForce_wzfnxo.png",
@@ -31,7 +31,7 @@ const Chemistry: Special = {
   name: "Chemistry",
   price: 2000000n,
   visibleValue: 800000n,
-  PayOff: 3,
+  PayOff: 2,
   ExtraEffect: 0,
   ActiveImage:
     "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737124/C-Chemistry_frtab0.png",
@@ -44,7 +44,7 @@ const Electromagnetism: Special = {
   name: "Electromagnetism",
   price: 15000000n,
   visibleValue: 6000000n,
-  PayOff: 6,
+  PayOff: 2,
   ExtraEffect: 0,
   ActiveImage:
     "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737124/D-Electromagnetism_mtf1eh.png",
@@ -57,7 +57,7 @@ const Gravity: Special = {
   name: "Gravity",
   price: 200000000n,
   visibleValue: 80000000n,
-  PayOff: 4,
+  PayOff: 2,
   ExtraEffect: 0,
   ActiveImage:
     "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737125/E-Gravity1_wfkf8p.png",
@@ -69,7 +69,7 @@ const Fusion: Special = {
   name: "Fusion",
   price: 6000000000000000n,
   visibleValue: 2400000000000000n,
-  PayOff: 4,
+  PayOff: 2,
   ExtraEffect: 0,
   ActiveImage:
     "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737125/F-Fusion_kql6vs.png",
@@ -81,7 +81,7 @@ const Gravity2: Special = {
   name: "Gravity2",
   price: 163074539520000000000000000000000n,
   visibleValue: 65229815808000000000000000000000n,
-  PayOff: 4,
+  PayOff: 2,
   ExtraEffect: 0,
   ActiveImage:
     "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737125/H-Gravity3_ecjxk8.png",
@@ -94,7 +94,7 @@ const Gravity3: Special = {
   name: "Gravity3",
   price: 6522981580800000000000000000000000n,
   visibleValue: 2609192632320000000000000000000000n,
-  PayOff: 4,
+  PayOff: 2,
   ExtraEffect: 0,
   ActiveImage:
     "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737125/G-Gravity2_rq5mit.png",

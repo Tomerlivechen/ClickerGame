@@ -3,7 +3,7 @@ import { InventoryContext } from "../ContextAPI/InventoryContext";
 import { LargeNumbers } from "../Constants/Methods";
 
 const ClickSpace = () => {
-  const { addPerSec, inventory, enthalpy, clickOn } = useContext(
+  const {perClick, addPerSec, inventory, enthalpy, clickOn } = useContext(
     InventoryContext
   );
   const [addSec, setAddsec] = useState<bigint>(addPerSec);
@@ -19,6 +19,7 @@ const ClickSpace = () => {
         click {LargeNumbers(enthalpy)}{" "}
       </button>
       <h2 className=""> {LargeNumbers(addSec)}/sec </h2>
+      <h2 className=""> {LargeNumbers(perClick)}/Click </h2>
     </>
   );
 };

@@ -10,14 +10,17 @@ const Notations = () => {
 
   return (
     <>
+    <Frame tailwind={""}  >
+      Forces
     <Frame tailwind={"overflow-y-hidden overflow-x-scroll"}  >
-      <div className="flex flex-row space-x-2">
+      <div className="flex flex-row space-x-2 h-24">
         {inventory?.SpecialList.map((Item, index) => (
           <div key={index}>
             <SpeicalNotation {...Item} />
           </div>
         ))}
       </div></Frame>
+      </Frame>
     </>
   );
 };
