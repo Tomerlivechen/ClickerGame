@@ -8,7 +8,23 @@ export default {
         animation: {
           'spin-slow': 'spin 5s linear infinite',
           'spin-fast': 'spin 0.5s linear infinite',
-        },},
+        },
+        boxShadow: {
+          'yelloGlow': '0 0 30px rgba(255, 223, 0, 0.5), 0 0 40px rgba(255, 223, 0, 0.3)',
+          'glow-0': '0 0 5px rgba(59, 130, 246, 0.5), 0 0 10px rgba(59, 130, 246, 0.3)',
+          'glow-1': '0 0 10px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.3)',
+          'glow-2': '0 0 20px rgba(59, 130, 246, 0.5), 0 0 30px rgba(59, 130, 246, 0.3)',
+          'glow-3': '0 0 30px rgba(59, 130, 246, 0.5), 0 0 40px rgba(59, 130, 246, 0.3)',
+          'glow-4': '0 0 40px rgba(59, 130, 246, 0.5), 0 0 50px rgba(59, 130, 246, 0.3)',
+          'glow-5': '0 0 50px rgba(59, 130, 246, 0.5), 0 0 60px rgba(59, 130, 246, 0.3)',
+          'glow-6': '0 0 60px rgba(59, 130, 246, 0.5), 0 0 70px rgba(59, 130, 246, 0.3)',
+          'glow-7': '0 0 70px rgba(59, 130, 246, 0.5), 0 0 80px rgba(59, 130, 246, 0.3)',
+          'glow-8': '0 0 80px rgba(59, 130, 246, 0.5), 0 0 90px rgba(59, 130, 246, 0.3)',
+          'glow-9': '0 0 90px rgba(59, 130, 246, 0.5), 0 0 100px rgba(59, 130, 246, 0.3)',
+          'glow-10': '0 0 100px rgba(59, 130, 246, 0.5), 0 0 110px rgba(59, 130, 246, 0.3)',
+        },
+      
+      },
       variants: {
         extend: {
         },

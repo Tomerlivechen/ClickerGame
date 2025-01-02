@@ -13,9 +13,9 @@ const WeakForce: Special = {
   invisibleImage: "",
 };
 
-const StringForce: Special = {
+const StrongForce: Special = {
   Id: "",
-  name: "String force",
+  name: "Strong force",
   price: 1500n,
   visibleValue: 0n,
   PayOff: 4,
@@ -104,7 +104,7 @@ const Gravity3: Special = {
 
 export const SpecialNames = {
   WeakForce,
-  StringForce,
+  StrongForce,
   Chemistry,
   Electromagnetism,
   Gravity,
@@ -115,7 +115,7 @@ export const SpecialNames = {
 
 export const SpecialNamesList = [
   WeakForce,
-  StringForce,
+  StrongForce,
   Chemistry,
   Electromagnetism,
   Gravity,

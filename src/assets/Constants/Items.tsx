@@ -35,7 +35,7 @@ const Atoms: itemVals = {
   visibleValue: 0n,
   PriceIncrease: 0.05,
   PayOff: 100n,
-  RequiredSpecial: SpecialNames.StringForce,
+  RequiredSpecial: SpecialNames.StrongForce,
   ActiveImage:
     "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737112/3-Atom_gkxv3q.png",
   HiddenImage: "",
@@ -49,6 +49,7 @@ const Gas: itemVals = {
   visibleValue: 60000n,
   PriceIncrease: 0.05,
   PayOff: 1000n,
+  RequiredSpecial: SpecialNames.StrongForce,
   ActiveImage:
     "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737111/4-Gas_kczidz.png",
   HiddenImage: "",
@@ -62,6 +63,7 @@ const Dust: itemVals = {
   visibleValue: 118500n,
   PriceIncrease: 0.05,
   PayOff: 10000n,
+  RequiredSpecial: SpecialNames.StrongForce,
   ActiveImage:
     "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737112/5-Dust_gwmxus.png",
   HiddenImage: "",

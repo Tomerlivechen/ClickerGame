@@ -1,0 +1,25 @@
+import { useContext } from "react";
+import { Frame } from "./Frame";
+import { InventoryContext } from "../ContextAPI/InventoryContext";
+import { SpeicalNotation } from "./SpeicalNotation";
+
+const Notations = () => {
+    const {inventory} = useContext(
+        InventoryContext
+      );
+
+  return (
+    <>
+    <Frame tailwind={"overflow-y-hidden overflow-x-scroll"}  >
+      <div className="flex flex-row space-x-2">
+        {inventory?.SpecialList.map((Item, index) => (
+          <div key={index}>
+            <SpeicalNotation {...Item} />
+          </div>
+        ))}
+      </div></Frame>
+    </>
+  );
+};
+
+export { Notations };

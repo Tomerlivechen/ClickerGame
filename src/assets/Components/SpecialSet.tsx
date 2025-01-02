@@ -1,16 +1,17 @@
 import { SpecialNamesList } from "../Constants/Special";
 import { SpecialCell } from "./SpecialCell";
+import { YScollFrame } from "./YScollFrame";
 
 const SpecialSet = () => {
   return (
     <>
-      <div className="flex flex-col space-y-2">
+      <YScollFrame tailwind={""} title={"Aspects"} >
         {SpecialNamesList.map((Item, index) => (
           <div key={index}>
             <SpecialCell {...Item} />
           </div>
         ))}
-      </div>
+      </YScollFrame>
     </>
   );
 };

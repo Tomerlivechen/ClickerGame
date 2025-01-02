@@ -7,7 +7,7 @@ import {
   Special,
   StoredInventory,
 } from "../Types/ButtonTypes";
-import { DecodeStorage, EncodeStorage } from "../Constants/Methods";
+import { DecodeStorage, EncodeStorage, FingerToFingerValue } from "../Constants/Methods";
 
 const initialValues = {
   InventoryString: localStorage.getItem("ClickerInventory")?.toString() ?? null,
@@ -20,12 +20,10 @@ const BaseInventoryString: StoredInventory = {
   SpecialList: [],
   FingerList: [
     {
-      Id: "",
-      name: "Finger1",
-      price: 0n,
+      Id: 0,
+      name: "Finger0",
       PayOff: 1,
       ActiveImage: "",
-      HiddenImage: "",
     },
   ],
   DimensionList: [],
@@ -202,10 +200,10 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     }));
   };
 
-  const addFinger = (Finger: Finger) => {
+  const addFinger = (finger: Finger) => {
     setInventory((prev) => ({
       ...prev,
-      FingerList: [...prev.FingerList, Finger],
+      FingerList: [...prev.FingerList, FingerToFingerValue(finger)],
     }));
   };
 

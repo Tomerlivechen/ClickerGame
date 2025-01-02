@@ -33,17 +33,15 @@ export interface Special {
 
 }
 
-export interface FingerVaue {
-    Id: string;
+export interface FingerValue {
+    Id: number;
     name: string;
-    price: bigint;
     PayOff: number;
     ActiveImage: string
-    HiddenImage: string
 }
 
 export interface Finger {
-    Id: string;
+    Id: number;
     name: string;
     price: bigint;
     PayOff: number;
@@ -63,7 +61,7 @@ export interface Dimension {
 export interface StoredInventory {
     ItemList: itemAmount[];
     SpecialList: Special[];
-    FingerList: FingerVaue[];
+    FingerList: FingerValue[];
     DimensionList: Dimension[];
     HasStar: boolean
 }

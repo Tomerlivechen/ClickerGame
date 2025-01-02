@@ -1,7 +1,7 @@
 
 
 import { Base64 } from 'js-base64';
-import { StoredInventory } from '../Types/ButtonTypes';
+import { Finger, FingerValue, StoredInventory } from '../Types/ButtonTypes';
 export const DecodeStorage = (token: string) =>{
 const decodedToken = Base64.decode(token);
 const reviver = (_: string, value: any) => {
@@ -89,4 +89,14 @@ export const Log10BigInt = (number: bigint) => {
     const NumToString : string = number.toString()
     const Log10 : number = NumToString.length - 1
     return Log10
+}
+
+export const FingerToFingerValue = (finger: Finger) =>{
+    const FingerVal : FingerValue = {
+        Id: finger.Id,
+        name: finger.name,
+        PayOff: finger.PayOff,
+        ActiveImage: finger.ActiveImage,
+    }
+    return FingerVal
 }
