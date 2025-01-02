@@ -10,7 +10,7 @@ const YScollFrame: React.FC<ScrollFrameVars> = (ThisFrameVars) => {
       </div>
     
       <div
-    className={`border-2 rounded-lg p-1 border-solid ${ThisFrameVars.tailwind} overflow-x-hidden   h-1/2`}
+    className={`border-2 rounded-lg p-1 border-solid ${ThisFrameVars.tailwind} overflow-x-hidden `}
   >
 
       <div
