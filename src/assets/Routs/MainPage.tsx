@@ -15,7 +15,6 @@ const MainPage = () => {
       <div className="flex flex-1 h-full gl:overflow-y-hidden justify-center">
         <MainComponent />
       </div>
-      <div className="bg-teal-700 h-5"></div>
     </div>
   );
 };

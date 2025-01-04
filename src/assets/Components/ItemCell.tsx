@@ -68,9 +68,9 @@ const ItemCell = (item: itemVals) => {
             !requiermentsMet ? `Requires ${item.RequiredSpecial?.name}` : ``
           }
         >
-          <Frame tailwind="border-teal-700 w-52 xl:w-64 bg-teal-500 hover:bg-teal-300">
+          <Frame tailwind="border-teal-700 w-44 md:w-52 xl:w-64 bg-teal-500 hover:bg-teal-300">
             <div
-              className="flex flex-row  p-1 hover:cursor-pointer"
+              className="flex flex-row p-1 hover:cursor-pointer"
               onClick={() => buyItem()}
             >
               <img
@@ -87,7 +87,7 @@ const ItemCell = (item: itemVals) => {
                 </h2>
               </div>
               <div className="flex items-center justify-end ">
-                <h2 className="text-lg font-bold text-right p-4 ml-6">
+                <h2 className="text-lg font-bold text-right gl:p-4 lg:ml-6 p-1">
                   {LargeNumbers(currentAmount)}
                 </h2>
               </div>{" "}

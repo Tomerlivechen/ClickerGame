@@ -31,18 +31,20 @@ const SpecialCell = (item: Special) => {
   return (
     <>
       {totalEnthalpy >= item.visibleValue && visible && (
-        <Frame tailwind="border-teal-700 w-52 xl:w-64 bg-teal-500  hover:bg-teal-300">
+        <Frame tailwind="border-teal-700 w-32 lg:w-64 bg-teal-500   hover:bg-teal-300">
           <div
-            className="flex flex-row  p-1 hover:cursor-pointer"
+            className="flex flex-col lg:flex-row  p-1 hover:cursor-pointer"
             onClick={() => buyItem()}
           >
-            <img
-              src={item.ActiveImage}
-              className={`${
-                enthalpy > price ? `` : `grayscale`
-              } h-20 w-20 rounded-lg object-cover`}
-              alt={item.name}
-            />
+            <div className="flex items-center justify-center">
+              <img
+                src={item.ActiveImage}
+                className={`${
+                  enthalpy > price ? `` : `grayscale`
+                } h-20 w-20 rounded-lg object-cover`}
+                alt={item.name}
+              />
+            </div>
             <div className="flex flex-col ml-1 flex-grow items-center justify-center">
               <h2 className="text-lg font-semibold">{item.name}</h2>
               <h2 className="text-md font-semibold text-violet-700">
