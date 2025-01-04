@@ -1,19 +1,26 @@
-const plugin = require("tailwindcss/plugin");
+/** @type {import('tailwindcss').Config} */
+import plugin from "tailwindcss/plugin";
 
-module.exports = {
+export default {
   darkMode: "class",
   important: true,
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  safelist: [
+    {
+      pattern: /opacity-\d+/, 
+    },
+  ],
   theme: {
     extend: {
       animation: {
-        'spin-slow': 'spin 5s linear infinite',
-        'spin-fast': 'spin 0.5s linear infinite',
-        'glowPulse': "glowPulse 2s infinite",
-        'fastglowPulse': "glowPulseBlue 1s infinite",
+        "spin-slow": "spin 5s linear infinite",
+        "spin-fast": "spin 0.5s linear infinite",
+        glowPulse: "glowPulse 2s infinite",
+        fastglowPulse: "glowPulseBlue 1s infinite",
       },
       boxShadow: {
-        'yelloGlow': '0 0 30px rgba(255, 223, 0, 0.5), 0 0 40px rgba(255, 223, 0, 0.3)',
+        yelloGlow:
+          "0 0 30px rgba(255, 223, 0, 0.5), 0 0 40px rgba(255, 223, 0, 0.3)",
       },
       keyframes: {
         glowPulse: {
