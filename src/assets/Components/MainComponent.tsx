@@ -7,10 +7,10 @@ import { SpecialSet } from "./SpecialSet";
 const MainComponent = () => {
   return (
     <>
-      <div className="flex h-full ">
-        <div className="grid grid-cols-2 gap-4 p-4 w-full  ">
+      <div className="flex  lx:h-full mb-5 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-4 w-full  ">
           {/* Left half: ClickSpace */}
-          <div className="border p-2 w-full h-screen">
+          <div className="border p-2 w-full  h-fit">
             <ClickSpace />
           </div>
 

@@ -12,9 +12,10 @@ const MainPage = () => {
 
   return (
     <div className="h-screen">
-      <div className="flex flex-1 h-full overflow-y-hidden justify-center">
+      <div className="flex flex-1 h-full gl:overflow-y-hidden justify-center">
         <MainComponent />
       </div>
+      <div className="bg-teal-700 h-5"></div>
     </div>
   );
 };

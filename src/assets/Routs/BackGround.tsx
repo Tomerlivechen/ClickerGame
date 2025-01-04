@@ -3,7 +3,9 @@ import { ReactNode } from "react";
 const BackGround: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <>
-      <div className="bg-teal-700">{children}</div>
+      <div className=" flex bg-teal-700 h-[170vh] md:h-[100vh] justify-center ">
+        {children}
+      </div>
     </>
   );
 };

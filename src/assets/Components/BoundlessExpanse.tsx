@@ -22,7 +22,7 @@ const BoundlessExpanse = () => {
   return (
     <>
       <div
-        className={`bg-black w-[70vh] h-[70vh] glow-box hover:animate-glowPulse rounded-2xl flex justify-center items-center ${
+        className={`bg-black w-[50vh] h-[50vh] xl:w-[60vh] xl:h-[60vh] glow-box hover:animate-glowPulse rounded-2xl flex justify-center items-center ${
           glow ? `animate-fastglowPulse` : ``
         }`}
       >

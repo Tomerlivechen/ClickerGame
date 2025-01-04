@@ -27,15 +27,17 @@ const ClickSpace = () => {
       </div>
 
       <div className=" text-left flex font-bold text-4xl">
-        <div className="w-[31vh] "></div> {LargeNumbers(enthalpy)}
+        <div className="w-[19vh]  xl:w-[26vh] "></div> {LargeNumbers(enthalpy)}
       </div>
       <div className=" text-center justify-center flex font-bold text-4xl ">
         {" "}
         Enthalpy{" "}
       </div>
-      <button onClick={clickOn} className="p-4">
-        <BoundlessExpanse />
-      </button>
+      <div className="flex justify-center items-center">
+        <button onClick={clickOn} className=" p-4">
+          <BoundlessExpanse />
+        </button>
+      </div>
     </>
   );
 };
