@@ -7,7 +7,11 @@ import {
   Special,
   StoredInventory,
 } from "../Types/ButtonTypes";
-import { DecodeStorage, EncodeStorage, FingerToFingerValue } from "../Constants/Methods";
+import {
+  DecodeStorage,
+  EncodeStorage,
+  FingerToFingerValue,
+} from "../Constants/Methods";
 
 const initialValues = {
   InventoryString: localStorage.getItem("ClickerInventory")?.toString() ?? null,
@@ -28,6 +32,7 @@ const BaseInventoryString: StoredInventory = {
   ],
   DimensionList: [],
   HasStar: false,
+  Achievements: [],
 };
 
 const defaultValues = {
@@ -40,7 +45,7 @@ const InventoryContext = createContext<{
   enthalpy: bigint;
   totalEnthalpy: bigint;
   addPerSec: bigint;
-  perClick: bigint,
+  perClick: bigint;
   clickOn: () => void;
   addInvItem: (item: itemVals, price: bigint) => void;
   addSpecial: (special: Special) => void;
@@ -73,6 +78,7 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   );
   const [addPerSec, setAddPerSec] = useState<bigint>(0n);
   const [perClick, setPerClick] = useState<bigint>(0n);
+  const [higherThanTen, setHigherThanTen] = useState<boolean>(false);
 
   useEffect(() => {
     if (initialValues.Enthalpy) {
@@ -104,6 +110,30 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     }
   }, [inventory]);
 
+  useEffect(() => {
+    const intervalId = setInterval(
+      () => {
+        AddEnthalpy();
+      },
+      higherThanTen ? 100 : 1000
+    );
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [enthalpy]);
+
+  const InitilzeValues = () => {
+    setEnthalpy(defaultValues.DefaultEnthalpy);
+    setTotalEnthalpy(defaultValues.DefaultEnthalpy);
+    setInventory(defaultValues.DefaultInventory);
+  };
+
+  const ClearLocalStorage = () => {
+    localStorage.removeItem("ClickerEnthalpy");
+    localStorage.removeItem("TotalEnthalpy");
+    localStorage.removeItem("ClickerInventory");
+  };
+
   const clickOn = () => {
     let fingerValue: bigint = 1n;
     inventory?.FingerList.forEach((FingerList) => {
@@ -113,14 +143,13 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     setTotalEnthalpy((prev) => prev + fingerValue);
   };
 
-useEffect(() => {
-  let fingerValue: bigint = 1n;
-  inventory?.FingerList.forEach((FingerList) => {
-    fingerValue = fingerValue * BigInt(FingerList.PayOff);
-  });
-  setPerClick(fingerValue)
-},[inventory]);
-
+  useEffect(() => {
+    let fingerValue: bigint = 1n;
+    inventory?.FingerList.forEach((FingerList) => {
+      fingerValue = fingerValue * BigInt(FingerList.PayOff);
+    });
+    setPerClick(fingerValue);
+  }, [inventory]);
 
   const AddEnthalpy = () => {
     let AddEnthalpy: bigint = 0n;
@@ -149,15 +178,36 @@ useEffect(() => {
         MultiplyEnthalpy = MultiplyEnthalpy * BigInt(SpecialList.PayOff);
       });
     }
+
     if (MultiplyEnthalpy > 1) {
       setAddPerSec(AddEnthalpy * MultiplyEnthalpy);
-      setEnthalpy((prev) => prev + AddEnthalpy * MultiplyEnthalpy);
-      setTotalEnthalpy((prev) => prev + AddEnthalpy * MultiplyEnthalpy);
+      setEnthalpy(
+        (prev) =>
+          prev + (AddEnthalpy * MultiplyEnthalpy) / (higherThanTen ? 10n : 1n)
+      );
+      setTotalEnthalpy(
+        (prev) =>
+          prev + (AddEnthalpy * MultiplyEnthalpy) / (higherThanTen ? 10n : 1n)
+      );
     } else {
       setAddPerSec(AddEnthalpy);
-      setEnthalpy((prev) => prev + AddEnthalpy);
-      setTotalEnthalpy((prev) => prev + AddEnthalpy);
+      setEnthalpy((prev) => prev + AddEnthalpy / (higherThanTen ? 10n : 1n));
+      setTotalEnthalpy(
+        (prev) => prev + AddEnthalpy / (higherThanTen ? 10n : 1n)
+      );
     }
+  };
+
+  useEffect(() => {
+    if (addPerSec > 10) {
+      setHigherThanTen(true);
+    }
+  }, [addPerSec]);
+
+  const RestGame = async () => {
+    InitilzeValues();
+    ClearLocalStorage();
+    window.location.reload();
   };
 
   const addStar = () => {
@@ -206,11 +256,15 @@ useEffect(() => {
   };
 
   const addSpecial = (special: Special) => {
-    setInventory((prev) => ({
-      ...prev,
-      SpecialList: [...prev.SpecialList, special],
-    }));
-    UseEnthalpy(special.price);
+    if (special.name.includes("Reset") && !inventory.HasStar) {
+      RestGame();
+    } else {
+      setInventory((prev) => ({
+        ...prev,
+        SpecialList: [...prev.SpecialList, special],
+      }));
+      UseEnthalpy(special.price);
+    }
   };
 
   const addFinger = (finger: Finger) => {
@@ -234,15 +288,6 @@ useEffect(() => {
       setEnthalpy(newEnthalpy);
     }
   };
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      AddEnthalpy();
-    }, 1000);
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, [enthalpy]);
 
   return (
     <InventoryContext.Provider

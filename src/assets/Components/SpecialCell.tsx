@@ -23,7 +23,6 @@ const SpecialCell = (item: Special) => {
         (i) => i.name === item.name
       );
       if (existingItemIndex !== -1) {
-        console.log(item.name);
         setVisible(false);
       }
     }
@@ -32,7 +31,7 @@ const SpecialCell = (item: Special) => {
   return (
     <>
       {totalEnthalpy >= item.visibleValue && visible && (
-        <Frame tailwind="border-teal-700 w-64 bg-teal-500">
+        <Frame tailwind="border-teal-700 w-64 bg-teal-500  hover:bg-teal-300">
           <div
             className="flex flex-row  p-1 hover:cursor-pointer"
             onClick={() => buyItem()}

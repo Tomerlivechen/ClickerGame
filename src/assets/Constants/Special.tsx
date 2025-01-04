@@ -102,6 +102,32 @@ const Gravity3: Special = {
   invisibleImage: "",
 };
 
+const Reset: Special = {
+  Id: "",
+  name: "Reset Game",
+  price: 10n,
+  visibleValue: 10n,
+  PayOff: 0,
+  ExtraEffect: 0,
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737125/G-Gravity2_rq5mit.png",
+  HiddenImage: "",
+  invisibleImage: "",
+};
+
+const Ascend: Special = {
+  Id: "",
+  name: "Ascend to the next Universe",
+  price: 58706834227200000000000000000000000000000n,
+  visibleValue: 2348273369088000000000000000000000000000n,
+  PayOff: 0,
+  ExtraEffect: 0,
+  ActiveImage:
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737125/G-Gravity2_rq5mit.png",
+  HiddenImage: "",
+  invisibleImage: "",
+};
+
 export const SpecialNames = {
   WeakForce,
   StrongForce,
@@ -111,6 +137,8 @@ export const SpecialNames = {
   Fusion,
   Gravity2,
   Gravity3,
+  Reset,
+  Ascend,
 };
 
 export const SpecialNamesList = [
@@ -122,4 +150,6 @@ export const SpecialNamesList = [
   Fusion,
   Gravity2,
   Gravity3,
+  Reset,
+  Ascend,
 ];

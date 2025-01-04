@@ -1,8 +1,7 @@
-
 import { MainComponent } from "../Components/MainComponent";
 
 const MainPage = () => {
-/*
+  /*
    useEffect(() => {
     document.body.style.overflow = "hidden";
 
@@ -12,12 +11,11 @@ const MainPage = () => {
   }, []); */
 
   return (
-
-<div className="flex flex-1 h-5/6">
-
-    <MainComponent />
-  </div>
-
+    <div className="h-screen">
+      <div className="flex flex-1 h-full overflow-y-hidden justify-center">
+        <MainComponent />
+      </div>
+    </div>
   );
 };
 

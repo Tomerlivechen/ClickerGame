@@ -5,7 +5,7 @@ import { YScollFrame } from "./YScollFrame";
 const SpecialSet = () => {
   return (
     <>
-      <YScollFrame tailwind={""} title={"Aspects"} >
+      <YScollFrame tailwind={"h-full"} title={"Aspects"}>
         {SpecialNamesList.map((Item, index) => (
           <div key={index}>
             <SpecialCell {...Item} />
