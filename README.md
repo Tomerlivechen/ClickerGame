@@ -1,50 +1,95 @@
-# React + TypeScript + Vite
+# Univers Clicker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Created by Tomer Chen**
 
-Currently, two official plugins are available:
+[Play the game here!](https://clickergame-jppi.onrender.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Univers Clicker is a React-based incremental game where you generate and use enthalpy to create elements and structures of the universe, from subatomic particles to galaxies and beyond.
 
-## Expanding the ESLint configuration
+## Gameplay
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+In Univers Clicker, you click to generate enthalpy, which can be used to purchase items and unlock new forces. As you progress, you can create increasingly complex items and discover the fundamental forces of the universe. Use these forces to unlock higher tiers of items, culminating in the creation of stars, black holes, and galaxies.
 
-- Configure the top-level `parserOptions` property like this:
+### Items
+You can purchase and create the following items:
+- **Lepton**
+- **Boson**
+- **Atoms**
+- **Gas**
+- **Dust**
+- **Water**
+- **Rocks**
+- **Asteroids**
+- **Comet**
+- **Dwarf Planet**
+- **Rocky Planet**
+- **Ice Planet**
+- **Gas Planet**
+- **Brown Dwarf**
+- **Star M, K, G, F, A, B, O**
+- **Neutron Star**
+- **Black Hole**
+- **Quasar**
+- **Nebula**
+- **Galaxy**
+- **Galaxy Cluster**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Forces
+Unlock the forces of the universe to enable the creation of advanced items:
+- **Weak Force**
+- **Strong Force**
+- **Chemistry**
+- **Electromagnetism**
+- **Gravity**
+- **Fusion**
+- **Gravity 2**
+- **Gravity 3**
+
+## Features
+- **Incremental Progression:** Build enthalpy and use it to unlock progressively complex items.
+- **Universe Simulation:** Explore the building blocks of the universe, from subatomic particles to entire galaxies.
+- **Interactive Design:** Responsive UI with engaging animations and a visually immersive experience.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd clickergame
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173` to start playing.
+
+## Build for Production
+
+To build the game for production:
+```bash
+npm run build
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+The optimized build will be available in the `dist` folder.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Deployed Version
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+You can play the live version of the game at [Univers Clicker](https://clickergame-jppi.onrender.com/).
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+If you have any questions or suggestions, please contact me via:
+
+- Email: [TomerLiveChenWork@gmail.com](mailto:tomerlivechenwork@gmail.com)
+- LinkedIn: [Tomerlivechen](https://github.com/Tomerlivechen/)
