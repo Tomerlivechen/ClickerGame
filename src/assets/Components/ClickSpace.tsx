@@ -27,7 +27,7 @@ const ClickSpace = () => {
       </div>
 
       <div className=" text-left flex font-bold text-4xl">
-        <div className="w-[19vh]  xl:w-[26vh] "></div> {LargeNumbers(enthalpy)}
+        <div className="w-[21vh]  xl:w-[26vh] "></div> {LargeNumbers(enthalpy)}
       </div>
       <div className=" text-center justify-center flex font-bold text-4xl ">
         {" "}
