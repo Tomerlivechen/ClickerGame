@@ -71,4 +71,5 @@ export interface Achievement {
     name: string;
     itemName: string;
     amount: number;
+    ActiveImage: string;
 }

@@ -14,3 +14,22 @@ export const ConfirmRestart = async () =>
         return true;
       }
     });
+
+    export const showToast=(message:string) => {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "bottom",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
+      });
+    
+      Toast.fire({
+        icon: "success", 
+        title: message,
+      });
+    }

@@ -1,12 +1,14 @@
 import { useContext, useEffect, useState } from "react";
-import { itemVals } from "../Types/ButtonTypes";
+import { Achievement, itemVals } from "../Types/ButtonTypes";
 import { InventoryContext } from "../ContextAPI/InventoryContext";
 import { LargeNumbers } from "../Constants/Methods";
 import { Frame } from "./Frame";
 import { Tooltip } from "react-bootstrap";
+import { showToast } from "../Constants/Alerts";
+import { AchievementsList } from "../Constants/Achievement";
 
 const ItemCell = (item: itemVals) => {
-  const { totalEnthalpy, inventory, enthalpy, addInvItem } = useContext(
+  const { totalEnthalpy, inventory, enthalpy, addInvItem , addAchievement } = useContext(
     InventoryContext
   );
   const [price, setPrice] = useState(item.price);
@@ -18,6 +20,28 @@ const ItemCell = (item: itemVals) => {
       addInvItem(item, price);
     }
   };
+
+useEffect(() => {
+if (currentAmount == 10n || currentAmount == 50n || currentAmount == 100n){
+  showToast(`Congratulations, you have created ${currentAmount} ${item.name} `)
+
+const achievementExist = inventory?.Achievements.find(Achievement => Achievement.itemName === item.name && Achievement.amount === Number(currentAmount))
+if (!achievementExist){
+const AchievementName = `Created ${currentAmount} ${item.name}`
+//const AchievementImage = AchievementsList.find(Achievement => Achievement.itemName === item.name && Achievement.amount === Number(currentAmount))
+//if (AchievementImage){
+const achievement : Achievement = {
+  name: AchievementName,
+  itemName: item.name,
+  amount: Number(currentAmount),
+  ActiveImage: "https://st3.depositphotos.com/17828278/33150/v/450/depositphotos_331503262-stock-illustration-no-image-vector-symbol-missing.jpg",
+}
+console.log(achievement);
+addAchievement(achievement)
+//}
+}
+}
+},[currentAmount])
 
   useEffect(() => {
     if (item.RequiredSpecial) {

@@ -24,6 +24,10 @@ export const LargeNumbers = (number: bigint) => {
   const OrderOfMag = Log10BigInt(number);
   let Division: number = 0;
   let Name: string = "";
+  if (OrderOfMag >= 3 && OrderOfMag < 6) {
+    Division = 3;
+    Name = "K";
+  }
   if (OrderOfMag >= 6 && OrderOfMag < 9) {
     Division = 6;
     Name = "M";
@@ -99,3 +103,5 @@ export const FingerToFingerValue = (finger: Finger) => {
   };
   return FingerVal;
 };
+
+

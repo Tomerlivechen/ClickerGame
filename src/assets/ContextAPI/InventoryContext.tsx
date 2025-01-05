@@ -1,5 +1,6 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
 import {
+  Achievement,
   Dimension,
   Finger,
   itemAmount,
@@ -13,6 +14,7 @@ import {
   FingerToFingerValue,
 } from "../Constants/Methods";
 import { ConfirmRestart } from "../Constants/Alerts";
+import { NextDimensions } from "../Constants/Dimension";
 
 const initialValues = {
   InventoryString: localStorage.getItem("ClickerInventory")?.toString() ?? null,
@@ -50,6 +52,7 @@ const InventoryContext = createContext<{
   clickOn: () => void;
   addInvItem: (item: itemVals, price: bigint) => void;
   addSpecial: (special: Special) => void;
+  addAchievement: (achievement: Achievement) => void;
   Reset: (NewDimention: Dimension) => void;
   addFinger: (finger: Finger) => void;
   UseEnthalpy: (amount: bigint) => void;
@@ -62,6 +65,7 @@ const InventoryContext = createContext<{
   clickOn: () => {},
   addInvItem: () => {},
   addSpecial: () => {},
+  addAchievement: () => {},
   Reset: () => {},
   addFinger: () => {},
   UseEnthalpy: () => {},
@@ -144,6 +148,15 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     setTotalEnthalpy((prev) => prev + fingerValue);
   };
 
+const addAchievement = (achievement: Achievement) => {
+  setInventory((prev) => ({
+    ...prev,
+    Achievements: [...prev.Achievements, achievement],
+  }));
+  console.log(inventory?.Achievements.map(item => item));
+}
+
+
   useEffect(() => {
     let fingerValue: bigint = 1n;
     inventory?.FingerList.forEach((FingerList) => {
@@ -155,6 +168,7 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const AddEnthalpy = () => {
     let AddEnthalpy: bigint = 0n;
     let MultiplyEnthalpy: bigint = 1n;
+    const level = BigInt(Math.pow(2,inventory.DimensionList.length))
     if (inventory?.HasStar) {
       inventory?.ItemList.forEach((ItemList) => {
         AddEnthalpy =
@@ -181,20 +195,20 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     }
 
     if (MultiplyEnthalpy > 1) {
-      setAddPerSec(AddEnthalpy * MultiplyEnthalpy);
+      setAddPerSec(AddEnthalpy * MultiplyEnthalpy  * level);
       setEnthalpy(
         (prev) =>
-          prev + (AddEnthalpy * MultiplyEnthalpy) / (higherThanTen ? 10n : 1n)
+          prev + (AddEnthalpy * MultiplyEnthalpy * level) / (higherThanTen ? 10n : 1n)
       );
       setTotalEnthalpy(
         (prev) =>
-          prev + (AddEnthalpy * MultiplyEnthalpy) / (higherThanTen ? 10n : 1n)
+          prev + (AddEnthalpy * MultiplyEnthalpy * level) / (higherThanTen ? 10n : 1n)
       );
     } else {
-      setAddPerSec(AddEnthalpy);
-      setEnthalpy((prev) => prev + AddEnthalpy / (higherThanTen ? 10n : 1n));
+      setAddPerSec(AddEnthalpy  * level);
+      setEnthalpy((prev) => prev + (AddEnthalpy * level) / (higherThanTen ? 10n : 1n));
       setTotalEnthalpy(
-        (prev) => prev + AddEnthalpy / (higherThanTen ? 10n : 1n)
+        (prev) => prev + (AddEnthalpy * level) / (higherThanTen ? 10n : 1n)
       );
     }
   };
@@ -259,9 +273,23 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     UseEnthalpy(price);
   };
 
+  const AscendGame = () =>{
+    const level = inventory.DimensionList.length
+    const Dimension = [...inventory.DimensionList,NextDimensions[level]]
+    RestGame()
+    setInventory((prev) => ({
+      ...prev,
+      DimensionList: [...Dimension],
+    }));
+
+  }
+
+
   const addSpecial = (special: Special) => {
     if (special.name.includes("Reset") && !inventory.HasStar) {
-      RestGame();
+      RestGame();}
+      if (special.name.includes("Ascend") && !inventory.HasStar) {
+        AscendGame();
     } else {
       setInventory((prev) => ({
         ...prev,
@@ -301,6 +329,7 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
         totalEnthalpy,
         inventory,
         enthalpy,
+        addAchievement,
         clickOn,
         addInvItem,
         addSpecial,

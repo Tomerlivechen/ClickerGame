@@ -10,9 +10,19 @@ const Notations = () => {
     <>
       <Frame tailwind={" font-bold text-xl"}>
         Forces
-        <Frame tailwind={"overflow-y-hidden overflow-x-scroll"}>
-          <div className="flex flex-row space-x-2 h-24">
-            {inventory?.SpecialList.map((Item, index) => (
+        <Frame tailwind={"overflow-y-hidden"}>
+          <div className="flex flex-row space-x-2 h-24 overflow-x-scroll">
+          {inventory?.DimensionList.map((Item, index) => (
+              <div key={index}>
+                <SpeicalNotation {...Item} />
+              </div>
+            ))}
+          {inventory?.SpecialList.map((Item, index) => (
+              <div key={index}>
+                <SpeicalNotation {...Item} />
+              </div>
+            ))}
+            {inventory?.Achievements.map((Item, index) => (
               <div key={index}>
                 <SpeicalNotation {...Item} />
               </div>

@@ -110,20 +110,20 @@ const Reset: Special = {
   PayOff: 0,
   ExtraEffect: 0,
   ActiveImage:
-    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737125/G-Gravity2_rq5mit.png",
+    "https://cdn.pixabay.com/photo/2024/04/11/11/54/universe-8689741_1280.jpg",
   HiddenImage: "",
   invisibleImage: "",
 };
 
 const Ascend: Special = {
   Id: "",
-  name: "Ascend to the next Universe",
+  name: "Ascend",
   price: 58706834227200000000000000000000000000000n,
   visibleValue: 2348273369088000000000000000000000000000n,
   PayOff: 0,
   ExtraEffect: 0,
   ActiveImage:
-    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1735737125/G-Gravity2_rq5mit.png",
+    "https://res.cloudinary.com/dhzndjkjl/image/upload/v1736081848/I-Ascension_coljl2.png",
   HiddenImage: "",
   invisibleImage: "",
 };
