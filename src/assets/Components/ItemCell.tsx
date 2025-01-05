@@ -5,7 +5,7 @@ import { LargeNumbers } from "../Constants/Methods";
 import { Frame } from "./Frame";
 import { Tooltip } from "react-bootstrap";
 import { showToast } from "../Constants/Alerts";
-import { AchievementsList } from "../Constants/Achievement";
+//import { AchievementsList } from "../Constants/Achievement";
 
 const ItemCell = (item: itemVals) => {
   const { totalEnthalpy, inventory, enthalpy, addInvItem , addAchievement } = useContext(
