@@ -1,16 +1,21 @@
 import { useContext, useEffect, useState } from "react";
-import { Achievement, itemVals } from "../Types/ButtonTypes";
+import { itemVals } from "../Types/ButtonTypes";
 import { InventoryContext } from "../ContextAPI/InventoryContext";
 import { LargeNumbers } from "../Constants/Methods";
 import { Frame } from "./Frame";
 import { Tooltip } from "react-bootstrap";
 import { showToast } from "../Constants/Alerts";
+import { AchievementsList } from "../Constants/Achievement";
 //import { AchievementsList } from "../Constants/Achievement";
 
 const ItemCell = (item: itemVals) => {
-  const { totalEnthalpy, inventory, enthalpy, addInvItem , addAchievement } = useContext(
-    InventoryContext
-  );
+  const {
+    totalEnthalpy,
+    inventory,
+    enthalpy,
+    addInvItem,
+    addAchievement,
+  } = useContext(InventoryContext);
   const [price, setPrice] = useState(item.price);
   const [currentAmount, setCurrentAmount] = useState(0n);
   const [requiermentsMet, setRequiermentsMet] = useState(false);
@@ -21,27 +26,29 @@ const ItemCell = (item: itemVals) => {
     }
   };
 
-useEffect(() => {
-if (currentAmount == 10n || currentAmount == 50n || currentAmount == 100n){
-  showToast(`Congratulations, you have created ${currentAmount} ${item.name} `)
+  useEffect(() => {
+    if (currentAmount == 10n || currentAmount == 50n || currentAmount == 100n) {
+      showToast(
+        `Congratulations, you have created ${currentAmount} ${item.name} `
+      );
 
-const achievementExist = inventory?.Achievements.find(Achievement => Achievement.itemName === item.name && Achievement.amount === Number(currentAmount))
-if (!achievementExist){
-const AchievementName = `Created ${currentAmount} ${item.name}`
-//const AchievementImage = AchievementsList.find(Achievement => Achievement.itemName === item.name && Achievement.amount === Number(currentAmount))
-//if (AchievementImage){
-const achievement : Achievement = {
-  name: AchievementName,
-  itemName: item.name,
-  amount: Number(currentAmount),
-  ActiveImage: "https://st3.depositphotos.com/17828278/33150/v/450/depositphotos_331503262-stock-illustration-no-image-vector-symbol-missing.jpg",
-}
-console.log(achievement);
-addAchievement(achievement)
-//}
-}
-}
-},[currentAmount])
+      const achievementExist = inventory?.Achievements.find(
+        (Achievement) =>
+          Achievement.itemName === item.name &&
+          Achievement.amount === Number(currentAmount)
+      );
+      if (!achievementExist) {
+        const SetAchievement = AchievementsList.find(
+          (Achievement) =>
+            Achievement.itemName === item.name &&
+            Achievement.amount === Number(currentAmount)
+        );
+        if (SetAchievement) {
+          addAchievement(SetAchievement);
+        }
+      }
+    }
+  }, [currentAmount]);
 
   useEffect(() => {
     if (item.RequiredSpecial) {

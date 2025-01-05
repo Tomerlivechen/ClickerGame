@@ -294,7 +294,7 @@ const StarO: itemVals = {
   invisibleImage: "",
 };
 
-const NurtonStar: itemVals = {
+const NeutronStar: itemVals = {
   Id: "",
   name: "Nurton Star",
   price: 9557636497920000000000000000000000n,
@@ -414,7 +414,7 @@ export const UniverseItems = [
   StarA,
   StarB,
   StarO,
-  NurtonStar,
+  NeutronStar,
   BlackHole,
   Quasar,
   Nebula,
