@@ -12,6 +12,7 @@ import {
   EncodeStorage,
   FingerToFingerValue,
 } from "../Constants/Methods";
+import { ConfirmRestart } from "../Constants/Alerts";
 
 const initialValues = {
   InventoryString: localStorage.getItem("ClickerInventory")?.toString() ?? null,
@@ -205,9 +206,12 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   }, [addPerSec]);
 
   const RestGame = async () => {
+   const confirm = await ConfirmRestart()
+   if (confirm) {
     InitilzeValues();
     ClearLocalStorage();
     window.location.reload();
+   }
   };
 
   const addStar = () => {
