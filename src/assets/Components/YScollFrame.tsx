@@ -4,7 +4,7 @@ const YScollFrame: React.FC<ScrollFrameVars> = (ThisFrameVars) => {
   return (
     <>
       <div
-        className={`rounded-lg p-1 overflow-x-hidden h-12 text-center items-center mt-2 font-bold text-xl`}
+        className={`rounded-lg p-1 overflow-x-hidden lg:h-12 h-fit text-center items-center mt-2 font-bold text-xl`}
       >
         {ThisFrameVars.title}
       </div>
