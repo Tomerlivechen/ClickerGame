@@ -14,7 +14,7 @@ const BoundlessExpanse = () => {
 
   useEffect(() => {
     const opacitySet =
-      Math.round((totalEnthalpy.toString().length - 1) / 10) * 5;
+      Math.round((totalEnthalpy.toString().length - 1) / 5) * 5;
     console.log(totalEnthalpy.toString().length - 1, opacitySet);
     setOpacity(`opacity-${opacitySet}`);
   }, [totalEnthalpy]);

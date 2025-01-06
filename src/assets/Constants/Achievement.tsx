@@ -232,19 +232,19 @@ const GasPlanetAchievements: Achievement[] = [
 const BrownDwarfAchievements: Achievement[] = [
   {
     name: "Brown Dwarf Collector I",
-    itemName: "BrownDwarf",
+    itemName: "Brown Dwarf",
     amount: 10,
     ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload//l_image:upload:RN-1_hzoch0/c_scale,fl_relative,w_0.44/o_100/fl_layer_apply,g_south_east,x_0.03,y_0.04/v1735737114/14-DwarfS_gsjwza.png",
   },
   {
     name: "Brown Dwarf Collector II",
-    itemName: "BrownDwarf",
+    itemName: "Brown Dwarf",
     amount: 50,
     ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload//l_image:upload:RN-2_qse5vu/c_scale,fl_relative,w_0.44/o_100/fl_layer_apply,g_south_east,x_0.03,y_0.04/v1735737114/14-DwarfS_gsjwza.png",
   },
   {
     name: "Brown Dwarf Collector III",
-    itemName: "BrownDwarf",
+    itemName: "Brown Dwarf",
     amount: 100,
     ActiveImage: "https://res.cloudinary.com/dhzndjkjl/image/upload//l_image:upload:RN-3_lhnpt8/c_scale,fl_relative,w_0.44/o_100/fl_layer_apply,g_south_east,x_0.03,y_0.04/v1735737114/14-DwarfS_gsjwza.png",
   },
