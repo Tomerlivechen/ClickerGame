@@ -156,7 +156,7 @@ const RockyPlanet: itemVals = {
 
 const IcePlanet: itemVals = {
   Id: "",
-  name: "IcePlanet",
+  name: "Ice Planet",
   price: 537516000000000000n,
   visibleValue: 26875800000000000n,
   PriceIncrease: 0.2,
@@ -170,7 +170,7 @@ const IcePlanet: itemVals = {
 
 const GasPlanet: itemVals = {
   Id: "",
-  name: "GasPlanet",
+  name: "Gas Planet",
   price: 48376440000000000000n,
   visibleValue: 2418822000000000000n,
   PriceIncrease: 0.2,

@@ -10,7 +10,7 @@ const MainComponent = () => {
       <div className="flex  lx:h-full mb-5 ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-4 w-full  ">
           {/* Left half: ClickSpace */}
-          <div className="border p-2 w-full  h-fit">
+          <div className="border p-2 w-full rounded-xl h-fit">
             <ClickSpace />
           </div>
 

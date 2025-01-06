@@ -82,6 +82,54 @@ export const LargeNumbers = (number: bigint) => {
     Division = 42;
     Name = "Tr";
   }
+  if (OrderOfMag >= 45 && OrderOfMag < 48) {
+    Division = 45;
+    Name = "Qa";
+  }
+  if (OrderOfMag >= 48 && OrderOfMag < 51) {
+    Division = 48;
+    Name = "Qi";
+  }
+  if (OrderOfMag >= 51 && OrderOfMag < 54) {
+    Division = 51;
+    Name = "Sx";
+  }
+  if (OrderOfMag >= 54 && OrderOfMag < 57) {
+    Division = 54;
+    Name = "Sp";
+  }
+  if (OrderOfMag >= 57 && OrderOfMag < 60) {
+    Division = 57;
+    Name = "Oc";
+  }
+  if (OrderOfMag >= 60 && OrderOfMag < 63) {
+    Division = 60;
+    Name = "Nv";
+  }
+  if (OrderOfMag >= 63 && OrderOfMag < 66) {
+    Division = 63;
+    Name = "Vg";
+  }
+  if (OrderOfMag >= 66 && OrderOfMag < 69) {
+    Division = 66;
+    Name = "Uv";
+  }
+  if (OrderOfMag >= 69 && OrderOfMag < 72) {
+    Division = 69;
+    Name = "Dv";
+  }
+  if (OrderOfMag >= 72 && OrderOfMag < 75) {
+    Division = 72;
+    Name = "Tv";
+  }
+  if (OrderOfMag >= 75 && OrderOfMag < 78) {
+    Division = 75;
+    Name = "Qav";
+  }
+  if (OrderOfMag >= 78 && OrderOfMag < 81) {
+    Division = 78;
+    Name = "Qiv";
+  }
   const ViewValue =
     Math.round((Number(number) / Math.pow(10, Division)) * 100.0) / 100.0 +
     Name;

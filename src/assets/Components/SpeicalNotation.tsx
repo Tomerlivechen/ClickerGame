@@ -46,10 +46,10 @@ const SpeicalNotation = (item: Special|Achievement|Dimension) => {
       {visible && (
         <Frame tailwind="border-teal-700 bg-teal-500 w-16">
           <Tooltip title={item.name}>
-            <div className="flex flex-row  p-1">
+            <div className="flex flex-row ">
               <img
                 src={item.ActiveImage}
-                className={` h-12 w-12 rounded-lg object-cover`}
+                className={` h-14 w-14 rounded-lg object-cover`}
                 alt={item.name}
               />
             </div>

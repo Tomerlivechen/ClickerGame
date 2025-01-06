@@ -11,11 +11,14 @@ const MainPage = () => {
   }, []); */
 
   return (
-    <div className="h-screen">
-      <div className="flex flex-1 h-full gl:overflow-y-hidden justify-center">
-        <MainComponent />
-      </div>
-    </div>
+<div className="h-screen">
+  <div className="text-center">
+    <h1 className="text-3xl font-bold">Univers Clicker - Click to fill the Universe</h1>
+  </div>
+  <div className="flex flex-1 h-full gl:overflow-y-hidden justify-center">
+    <MainComponent />
+  </div>
+</div>
   );
 };
 

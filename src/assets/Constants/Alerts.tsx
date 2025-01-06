@@ -1,8 +1,8 @@
 import Swal from "sweetalert2";
 
-export const ConfirmRestart = async () =>
+export const ConfirmRestart = async (message:string) =>
     Swal.fire({
-      title: "Are you sure you want to restart the game?",
+      title: `Are you sure you want to ${message}?`,
       icon: "question",
       showCancelButton: true,
       heightAuto: false,

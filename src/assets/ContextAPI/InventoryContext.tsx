@@ -219,13 +219,14 @@ const addAchievement = (achievement: Achievement) => {
     }
   }, [addPerSec]);
 
-  const RestGame = async () => {
-   const confirm = await ConfirmRestart()
+  const RestGame = async (message:string) => {
+   const confirm = await ConfirmRestart(message)
    if (confirm) {
     InitilzeValues();
     ClearLocalStorage();
     window.location.reload();
    }
+   return confirm
   };
 
   const addStar = () => {
@@ -273,22 +274,23 @@ const addAchievement = (achievement: Achievement) => {
     UseEnthalpy(price);
   };
 
-  const AscendGame = () =>{
+  const AscendGame = async () =>{
     const level = inventory.DimensionList.length
     const Dimension = [...inventory.DimensionList,NextDimensions[level]]
-    RestGame()
+    const confirm = await RestGame("ascend")
+    if (confirm){
     setInventory((prev) => ({
       ...prev,
       DimensionList: [...Dimension],
     }));
-
+  }
   }
 
 
   const addSpecial = (special: Special) => {
-    if (special.name.includes("Reset") && !inventory.HasStar) {
-      RestGame();}
-      if (special.name.includes("Ascend") && !inventory.HasStar) {
+    if (special.name.includes("Reset") ) {
+      RestGame("restart the game");}
+     else if (special.name.includes("Ascend")) {
         AscendGame();
     } else {
       setInventory((prev) => ({
