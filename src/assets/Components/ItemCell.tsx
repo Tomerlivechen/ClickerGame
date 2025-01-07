@@ -24,12 +24,16 @@ const ItemCell = (item: itemVals) => {
     if (enthalpy > price && item && requiermentsMet) {
       addInvItem(item, price);
     }
+    if (item && !requiermentsMet) {
+      showToast(`You Require ${item.RequiredSpecial?.name} `, "info");
+    }
   };
 
   useEffect(() => {
     if (currentAmount == 10n || currentAmount == 50n || currentAmount == 100n) {
       showToast(
-        `Congratulations, you have created ${currentAmount} ${item.name} `
+        `Congratulations, you have created ${currentAmount} ${item.name} `,
+        "success"
       );
 
       const achievementExist = inventory?.Achievements.find(
