@@ -63,8 +63,9 @@ export interface StoredInventory {
     SpecialList: Special[];
     FingerList: FingerValue[];
     DimensionList: Dimension[];
-    Achievements: Achievement[]
-    HasStar: boolean
+    Achievements: Achievement[];
+    HasStar: boolean;
+    Time: Number;
 }
 
 export interface Achievement {

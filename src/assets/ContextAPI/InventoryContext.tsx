@@ -13,7 +13,7 @@ import {
   EncodeStorage,
   FingerToFingerValue,
 } from "../Constants/Methods";
-import { ConfirmRestart } from "../Constants/Alerts";
+import { ConfirmRestart, showToast } from "../Constants/Alerts";
 import { NextDimensions } from "../Constants/Dimension";
 
 const initialValues = {
@@ -36,6 +36,7 @@ const BaseInventoryString: StoredInventory = {
   DimensionList: [],
   HasStar: false,
   Achievements: [],
+  Time: Date.now(),
 };
 
 const defaultValues = {
@@ -84,6 +85,7 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [addPerSec, setAddPerSec] = useState<bigint>(0n);
   const [perClick, setPerClick] = useState<bigint>(0n);
   const [higherThanTen, setHigherThanTen] = useState<boolean>(false);
+  const [timePast, setTimePast]= useState<number>(0);
 
   useEffect(() => {
     if (initialValues.Enthalpy) {
@@ -98,10 +100,27 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     }
     if (initialValues.InventoryString) {
       setInventory(DecodeStorage(initialValues.InventoryString));
+      const TimeNow = Date.now() - Number(DecodeStorage(initialValues.InventoryString).Time)
+      setTimePast(TimeNow)
     } else {
       setInventory(defaultValues.DefaultInventory);
     }
   }, []);
+
+useEffect(()=> {
+if (timePast>0)
+{
+  if (timePast>2000){
+  showToast(`You've been out for ${Math.floor(timePast / 1000)} seconds don't worry, the universe kept turning.`, "success")
+  }
+  for (let i=0; i<timePast/1000; i++){
+  AddEnthalpy()
+  }
+  setTimePast(0)
+}
+
+},[timePast])
+
 
   useEffect(() => {
     localStorage.setItem("ClickerEnthalpy", enthalpy.toString());
@@ -119,6 +138,7 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const intervalId = setInterval(
       () => {
         AddEnthalpy();
+        updateTime();
       },
       higherThanTen ? 100 : 1000
     );
@@ -126,6 +146,15 @@ const InventoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
       clearInterval(intervalId);
     };
   }, [enthalpy]);
+
+
+  const updateTime = () => {
+    setInventory((prev) => ({
+      ...prev,
+      Time: Date.now(),
+    }));
+  }
+
 
   const InitilzeValues = () => {
     setEnthalpy(defaultValues.DefaultEnthalpy);
@@ -211,6 +240,7 @@ const addAchievement = (achievement: Achievement) => {
         (prev) => prev + (AddEnthalpy * level) / (higherThanTen ? 10n : 1n)
       );
     }
+    ;
   };
 
   useEffect(() => {
