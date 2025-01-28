@@ -16,7 +16,7 @@ const ClickSpace = () => {
 
   return (
     <>
-      <div className=" justify-center flex">
+      <div className=" flex  flex-col items-center lg:flex-row lg:justify-center ">
         <h2 className=" font-bold text-4xl p-4">
           {" "}
           {LargeNumbers(addSec)}/sec{" "}
